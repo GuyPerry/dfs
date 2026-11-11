@@ -1,0 +1,4807 @@
+[
+  {
+    "name": "get_metadata_sap_self",
+    "title": "get_metadata_sap_self",
+    "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+    "odataType": {
+      "metadataRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "batch_for_sap_self",
+    "title": "batch_for_sap_self",
+    "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+    "odataType": {
+      "batchRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_costcenterhierarchy_for_sap_self",
+    "title": "list_CostCenterHierarchy_for_sap_self",
+    "description": "Retrieve a list of entities from the CostCenterHierarchy collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_costcenterhierarchy_for_sap_self",
+    "title": "delete_CostCenterHierarchy_for_sap_self",
+    "description": "Delete an entity from CostCenterHierarchy EntitySet in the sap_self service.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "validitystartdate"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_costcenterhierarchy_for_sap_self",
+    "title": "get_CostCenterHierarchy_for_sap_self",
+    "description": "Retrieve a single entity by its key from the CostCenterHierarchy collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "validitystartdate"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_costcenterhierarchy_for_sap_self",
+    "title": "count_CostCenterHierarchy_for_sap_self",
+    "description": "Get the total count of entities in the CostCenterHierarchy collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_costcenterhierarchynode_for_sap_self",
+    "title": "list_CostCenterHierarchyNode_for_sap_self",
+    "description": "Retrieve a list of entities from the CostCenterHierarchyNode collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_costcenterhierarchynode_for_sap_self",
+    "title": "delete_CostCenterHierarchyNode_for_sap_self",
+    "description": "Delete an entity from CostCenterHierarchyNode EntitySet in the sap_self service.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "validitystartdate"
+          },
+          {
+            "name": "UniversalHierNodeType",
+            "newParameterName": "universalhiernodetype"
+          },
+          {
+            "name": "CostCtrHierarchyNodeShortID",
+            "newParameterName": "costctrhierarchynodeshortid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_costcenterhierarchynode_for_sap_self",
+    "title": "get_CostCenterHierarchyNode_for_sap_self",
+    "description": "Retrieve a single entity by its key from the CostCenterHierarchyNode collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "validitystartdate"
+          },
+          {
+            "name": "UniversalHierNodeType",
+            "newParameterName": "universalhiernodetype"
+          },
+          {
+            "name": "CostCtrHierarchyNodeShortID",
+            "newParameterName": "costctrhierarchynodeshortid"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_costcenterhierarchynode_for_sap_self",
+    "title": "count_CostCenterHierarchyNode_for_sap_self",
+    "description": "Get the total count of entities in the CostCenterHierarchyNode collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_costcenterhierarchynodetext_for_sap_self",
+    "title": "list_CostCenterHierarchyNodeText_for_sap_self",
+    "description": "Retrieve a list of entities from the CostCenterHierarchyNodeText collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNodeText",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_costcenterhierarchynodetext_for_sap_self",
+    "title": "get_CostCenterHierarchyNodeText_for_sap_self",
+    "description": "Retrieve a single entity by its key from the CostCenterHierarchyNodeText collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNodeText",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "validitystartdate"
+          },
+          {
+            "name": "UniversalHierNodeType",
+            "newParameterName": "universalhiernodetype"
+          },
+          {
+            "name": "CostCtrHierarchyNodeShortID",
+            "newParameterName": "costctrhierarchynodeshortid"
+          },
+          {
+            "name": "Language",
+            "newParameterName": "language"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_costcenterhierarchynodetext_for_sap_self",
+    "title": "count_CostCenterHierarchyNodeText_for_sap_self",
+    "description": "Get the total count of entities in the CostCenterHierarchyNodeText collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNodeText",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_costcenterhierarchytext_for_sap_self",
+    "title": "list_CostCenterHierarchyText_for_sap_self",
+    "description": "Retrieve a list of entities from the CostCenterHierarchyText collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyText",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_costcenterhierarchytext_for_sap_self",
+    "title": "get_CostCenterHierarchyText_for_sap_self",
+    "description": "Retrieve a single entity by its key from the CostCenterHierarchyText collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyText",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "validitystartdate"
+          },
+          {
+            "name": "Language",
+            "newParameterName": "language"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_costcenterhierarchytext_for_sap_self",
+    "title": "count_CostCenterHierarchyText_for_sap_self",
+    "description": "Get the total count of entities in the CostCenterHierarchyText collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyText",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_costcenterhierarchy__costctrhierarchynode_for_sap_self",
+    "title": "list_CostCenterHierarchy__CostCtrHierarchyNode_for_sap_self",
+    "description": "Retrieve a collection of contained entities from the _CostCtrHierarchyNode contained entity set (accessed via navigation path: CostCenterHierarchy → _CostCtrHierarchyNode) in the sap_self service. Supports OData query options for filtering, sorting, and pagination.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchyNode",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "count"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchy_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchy_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchy_validitystartdate"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_costcenterhierarchy__costctrhierarchynode_for_sap_self",
+    "title": "delete_CostCenterHierarchy__CostCtrHierarchyNode_for_sap_self",
+    "description": "Delete an entity from the contained _CostCtrHierarchyNode entity set in the sap_self service. Provide all ancestor keys and the entity key to identify the entity to delete.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchyNode",
+          "crudOperation": "delete",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costctrhierarchynode_costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "costctrhierarchynode_validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "costctrhierarchynode_validitystartdate"
+            },
+            {
+              "name": "UniversalHierNodeType",
+              "newParameterName": "costctrhierarchynode_universalhiernodetype"
+            },
+            {
+              "name": "CostCtrHierarchyNodeShortID",
+              "newParameterName": "costctrhierarchynode_costctrhierarchynodeshortid"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchy_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchy_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchy_validitystartdate"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_costcenterhierarchy__costctrhierarchynode_for_sap_self",
+    "title": "get_CostCenterHierarchy__CostCtrHierarchyNode_for_sap_self",
+    "description": "Retrieve a single contained entity by its key from the _CostCtrHierarchyNode contained entity set in the sap_self service. Provide all ancestor and entity key values to identify the specific entity.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchyNode",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costctrhierarchynode_costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "costctrhierarchynode_validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "costctrhierarchynode_validitystartdate"
+            },
+            {
+              "name": "UniversalHierNodeType",
+              "newParameterName": "costctrhierarchynode_universalhiernodetype"
+            },
+            {
+              "name": "CostCtrHierarchyNodeShortID",
+              "newParameterName": "costctrhierarchynode_costctrhierarchynodeshortid"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchy_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchy_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchy_validitystartdate"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_costcenterhierarchy__costctrhierarchynode_for_sap_self",
+    "title": "count_CostCenterHierarchy__CostCtrHierarchyNode_for_sap_self",
+    "description": "Count the number of entities in the contained _CostCtrHierarchyNode entity set in the sap_self service. Optionally use $filter to count only entities matching specific criteria.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchyNode",
+          "crudOperation": "count",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchy_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchy_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchy_validitystartdate"
+          },
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_costcenterhierarchy__costctrhierarchynode__costctrhiernodet",
+    "title": "list_CostCenterHierarchy__CostCtrHierarchyNode__CostCtrHierNodeText_for_sap_self",
+    "description": "Retrieve a collection of contained entities from the _CostCtrHierNodeText contained entity set (accessed via navigation path: CostCenterHierarchy → _CostCtrHierarchyNode → _CostCtrHierNodeText) in the sap_self service. Supports OData query options for filtering, sorting, and pagination.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchyNode",
+          "navigationProperty": {
+            "name": "_CostCtrHierNodeText",
+            "crudOperation": "read",
+            "parameters": [
+              {
+                "name": "filter"
+              },
+              {
+                "name": "select"
+              },
+              {
+                "name": "orderby"
+              },
+              {
+                "name": "top"
+              },
+              {
+                "name": "skip"
+              },
+              {
+                "name": "expand"
+              },
+              {
+                "name": "count"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costctrhierarchynode_costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "costctrhierarchynode_validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "costctrhierarchynode_validitystartdate"
+            },
+            {
+              "name": "UniversalHierNodeType",
+              "newParameterName": "costctrhierarchynode_universalhiernodetype"
+            },
+            {
+              "name": "CostCtrHierarchyNodeShortID",
+              "newParameterName": "costctrhierarchynode_costctrhierarchynodeshortid"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchy_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchy_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchy_validitystartdate"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_costcenterhierarchy__costctrhierarchynode__costctrhiernod",
+    "title": "delete_CostCenterHierarchy__CostCtrHierarchyNode__CostCtrHierNodeText_for_sap_self",
+    "description": "Delete an entity from the contained _CostCtrHierNodeText entity set in the sap_self service. Provide all ancestor keys and the entity key to identify the entity to delete.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchyNode",
+          "navigationProperty": {
+            "name": "_CostCtrHierNodeText",
+            "crudOperation": "delete",
+            "parameters": [
+              {
+                "name": "CostCenterHierarchyShortID",
+                "newParameterName": "costctrhiernodetext_costcenterhierarchyshortid"
+              },
+              {
+                "name": "ValidityEndDate",
+                "newParameterName": "costctrhiernodetext_validityenddate"
+              },
+              {
+                "name": "ValidityStartDate",
+                "newParameterName": "costctrhiernodetext_validitystartdate"
+              },
+              {
+                "name": "UniversalHierNodeType",
+                "newParameterName": "costctrhiernodetext_universalhiernodetype"
+              },
+              {
+                "name": "CostCtrHierarchyNodeShortID",
+                "newParameterName": "costctrhiernodetext_costctrhierarchynodeshortid"
+              },
+              {
+                "name": "Language",
+                "newParameterName": "costctrhiernodetext_language"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costctrhierarchynode_costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "costctrhierarchynode_validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "costctrhierarchynode_validitystartdate"
+            },
+            {
+              "name": "UniversalHierNodeType",
+              "newParameterName": "costctrhierarchynode_universalhiernodetype"
+            },
+            {
+              "name": "CostCtrHierarchyNodeShortID",
+              "newParameterName": "costctrhierarchynode_costctrhierarchynodeshortid"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchy_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchy_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchy_validitystartdate"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_costcenterhierarchy__costctrhierarchynode__costctrhiernodete",
+    "title": "get_CostCenterHierarchy__CostCtrHierarchyNode__CostCtrHierNodeText_for_sap_self",
+    "description": "Retrieve a single contained entity by its key from the _CostCtrHierNodeText contained entity set in the sap_self service. Provide all ancestor and entity key values to identify the specific entity.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchyNode",
+          "navigationProperty": {
+            "name": "_CostCtrHierNodeText",
+            "crudOperation": "readByKey",
+            "parameters": [
+              {
+                "name": "CostCenterHierarchyShortID",
+                "newParameterName": "costctrhiernodetext_costcenterhierarchyshortid"
+              },
+              {
+                "name": "ValidityEndDate",
+                "newParameterName": "costctrhiernodetext_validityenddate"
+              },
+              {
+                "name": "ValidityStartDate",
+                "newParameterName": "costctrhiernodetext_validitystartdate"
+              },
+              {
+                "name": "UniversalHierNodeType",
+                "newParameterName": "costctrhiernodetext_universalhiernodetype"
+              },
+              {
+                "name": "CostCtrHierarchyNodeShortID",
+                "newParameterName": "costctrhiernodetext_costctrhierarchynodeshortid"
+              },
+              {
+                "name": "Language",
+                "newParameterName": "costctrhiernodetext_language"
+              },
+              {
+                "name": "select"
+              },
+              {
+                "name": "expand"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costctrhierarchynode_costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "costctrhierarchynode_validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "costctrhierarchynode_validitystartdate"
+            },
+            {
+              "name": "UniversalHierNodeType",
+              "newParameterName": "costctrhierarchynode_universalhiernodetype"
+            },
+            {
+              "name": "CostCtrHierarchyNodeShortID",
+              "newParameterName": "costctrhierarchynode_costctrhierarchynodeshortid"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchy_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchy_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchy_validitystartdate"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_costcenterhierarchy__costctrhierarchynode__costctrhiernode",
+    "title": "count_CostCenterHierarchy__CostCtrHierarchyNode__CostCtrHierNodeText_for_sap_self",
+    "description": "Count the number of entities in the contained _CostCtrHierNodeText entity set in the sap_self service. Optionally use $filter to count only entities matching specific criteria.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchyNode",
+          "navigationProperty": {
+            "name": "_CostCtrHierNodeText",
+            "crudOperation": "count",
+            "parameters": []
+          },
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costctrhierarchynode_costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "costctrhierarchynode_validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "costctrhierarchynode_validitystartdate"
+            },
+            {
+              "name": "UniversalHierNodeType",
+              "newParameterName": "costctrhierarchynode_universalhiernodetype"
+            },
+            {
+              "name": "CostCtrHierarchyNodeShortID",
+              "newParameterName": "costctrhierarchynode_costctrhierarchynodeshortid"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchy_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchy_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchy_validitystartdate"
+          },
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_costcenterhierarchy__costctrhierarchytext_for_sap_self",
+    "title": "list_CostCenterHierarchy__CostCtrHierarchyText_for_sap_self",
+    "description": "Retrieve a collection of contained entities from the _CostCtrHierarchyText contained entity set (accessed via navigation path: CostCenterHierarchy → _CostCtrHierarchyText) in the sap_self service. Supports OData query options for filtering, sorting, and pagination.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchyText",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "count"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchy_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchy_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchy_validitystartdate"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_costcenterhierarchy__costctrhierarchytext_for_sap_self",
+    "title": "delete_CostCenterHierarchy__CostCtrHierarchyText_for_sap_self",
+    "description": "Delete an entity from the contained _CostCtrHierarchyText entity set in the sap_self service. Provide all ancestor keys and the entity key to identify the entity to delete.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchyText",
+          "crudOperation": "delete",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costctrhierarchytext_costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "costctrhierarchytext_validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "costctrhierarchytext_validitystartdate"
+            },
+            {
+              "name": "Language",
+              "newParameterName": "costctrhierarchytext_language"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchy_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchy_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchy_validitystartdate"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_costcenterhierarchy__costctrhierarchytext_for_sap_self",
+    "title": "get_CostCenterHierarchy__CostCtrHierarchyText_for_sap_self",
+    "description": "Retrieve a single contained entity by its key from the _CostCtrHierarchyText contained entity set in the sap_self service. Provide all ancestor and entity key values to identify the specific entity.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchyText",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costctrhierarchytext_costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "costctrhierarchytext_validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "costctrhierarchytext_validitystartdate"
+            },
+            {
+              "name": "Language",
+              "newParameterName": "costctrhierarchytext_language"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchy_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchy_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchy_validitystartdate"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_costcenterhierarchy__costctrhierarchytext_for_sap_self",
+    "title": "count_CostCenterHierarchy__CostCtrHierarchyText_for_sap_self",
+    "description": "Count the number of entities in the contained _CostCtrHierarchyText entity set in the sap_self service. Optionally use $filter to count only entities matching specific criteria.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchyText",
+          "crudOperation": "count",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchy_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchy_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchy_validitystartdate"
+          },
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_costcenterhierarchynode__costctrhiernodetext_for_sap_self",
+    "title": "list_CostCenterHierarchyNode__CostCtrHierNodeText_for_sap_self",
+    "description": "Retrieve a collection of contained entities from the _CostCtrHierNodeText contained entity set (accessed via navigation path: CostCenterHierarchyNode → _CostCtrHierNodeText) in the sap_self service. Supports OData query options for filtering, sorting, and pagination.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "navigationProperty": {
+          "name": "_CostCtrHierNodeText",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "count"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchynode_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchynode_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchynode_validitystartdate"
+          },
+          {
+            "name": "UniversalHierNodeType",
+            "newParameterName": "costcenterhierarchynode_universalhiernodetype"
+          },
+          {
+            "name": "CostCtrHierarchyNodeShortID",
+            "newParameterName": "costcenterhierarchynode_costctrhierarchynodeshortid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_costcenterhierarchynode__costctrhiernodetext_for_sap_self",
+    "title": "delete_CostCenterHierarchyNode__CostCtrHierNodeText_for_sap_self",
+    "description": "Delete an entity from the contained _CostCtrHierNodeText entity set in the sap_self service. Provide all ancestor keys and the entity key to identify the entity to delete.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "navigationProperty": {
+          "name": "_CostCtrHierNodeText",
+          "crudOperation": "delete",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costctrhiernodetext_costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "costctrhiernodetext_validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "costctrhiernodetext_validitystartdate"
+            },
+            {
+              "name": "UniversalHierNodeType",
+              "newParameterName": "costctrhiernodetext_universalhiernodetype"
+            },
+            {
+              "name": "CostCtrHierarchyNodeShortID",
+              "newParameterName": "costctrhiernodetext_costctrhierarchynodeshortid"
+            },
+            {
+              "name": "Language",
+              "newParameterName": "costctrhiernodetext_language"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchynode_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchynode_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchynode_validitystartdate"
+          },
+          {
+            "name": "UniversalHierNodeType",
+            "newParameterName": "costcenterhierarchynode_universalhiernodetype"
+          },
+          {
+            "name": "CostCtrHierarchyNodeShortID",
+            "newParameterName": "costcenterhierarchynode_costctrhierarchynodeshortid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_costcenterhierarchynode__costctrhiernodetext_for_sap_self",
+    "title": "get_CostCenterHierarchyNode__CostCtrHierNodeText_for_sap_self",
+    "description": "Retrieve a single contained entity by its key from the _CostCtrHierNodeText contained entity set in the sap_self service. Provide all ancestor and entity key values to identify the specific entity.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "navigationProperty": {
+          "name": "_CostCtrHierNodeText",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costctrhiernodetext_costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "costctrhiernodetext_validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "costctrhiernodetext_validitystartdate"
+            },
+            {
+              "name": "UniversalHierNodeType",
+              "newParameterName": "costctrhiernodetext_universalhiernodetype"
+            },
+            {
+              "name": "CostCtrHierarchyNodeShortID",
+              "newParameterName": "costctrhiernodetext_costctrhierarchynodeshortid"
+            },
+            {
+              "name": "Language",
+              "newParameterName": "costctrhiernodetext_language"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchynode_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchynode_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchynode_validitystartdate"
+          },
+          {
+            "name": "UniversalHierNodeType",
+            "newParameterName": "costcenterhierarchynode_universalhiernodetype"
+          },
+          {
+            "name": "CostCtrHierarchyNodeShortID",
+            "newParameterName": "costcenterhierarchynode_costctrhierarchynodeshortid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_costcenterhierarchynode__costctrhiernodetext_for_sap_self",
+    "title": "count_CostCenterHierarchyNode__CostCtrHierNodeText_for_sap_self",
+    "description": "Count the number of entities in the contained _CostCtrHierNodeText entity set in the sap_self service. Optionally use $filter to count only entities matching specific criteria.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "navigationProperty": {
+          "name": "_CostCtrHierNodeText",
+          "crudOperation": "count",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchynode_costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "costcenterhierarchynode_validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "costcenterhierarchynode_validitystartdate"
+          },
+          {
+            "name": "UniversalHierNodeType",
+            "newParameterName": "costcenterhierarchynode_universalhiernodetype"
+          },
+          {
+            "name": "CostCtrHierarchyNodeShortID",
+            "newParameterName": "costcenterhierarchynode_costctrhierarchynodeshortid"
+          },
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get__costctrhierarchy_in_costcenterhierarchynode_for_sap_self",
+    "title": "get__CostCtrHierarchy_in_CostCenterHierarchyNode_for_sap_self",
+    "description": "Navigate from CostCenterHierarchyNode to the related CostCenterHierarchy_Type entity via the '_CostCtrHierarchy' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchy",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "validitystartdate"
+          },
+          {
+            "name": "UniversalHierNodeType",
+            "newParameterName": "universalhiernodetype"
+          },
+          {
+            "name": "CostCtrHierarchyNodeShortID",
+            "newParameterName": "costctrhierarchynodeshortid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update__costctrhierarchy_in_costcenterhierarchynode_for_sap_self",
+    "title": "update__CostCtrHierarchy_in_CostCenterHierarchyNode_for_sap_self",
+    "description": "Update the CostCenterHierarchy_Type entity navigated from CostCenterHierarchyNode via the '_CostCtrHierarchy' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sap_self tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchy",
+          "crudOperation": "update",
+          "parameters": [
+            {
+              "name": "ControllingArea",
+              "newParameterName": "controllingarea"
+            },
+            {
+              "name": "UniversalHierVersStatus",
+              "newParameterName": "universalhierversstatus"
+            },
+            {
+              "name": "UniversalHierVersUpdatedAt",
+              "newParameterName": "universalhierversupdatedat"
+            },
+            {
+              "name": "UniversalHierVersUpdatedBy",
+              "newParameterName": "universalhierversupdatedby"
+            },
+            {
+              "name": "UniversalHierVersCreatedAt",
+              "newParameterName": "universalhierverscreatedat"
+            },
+            {
+              "name": "UniversalHierVersCreatedBy",
+              "newParameterName": "universalhierverscreatedby"
+            },
+            {
+              "name": "UniversalHierVersLockedBy",
+              "newParameterName": "universalhierverslockedby"
+            },
+            {
+              "name": "UniversalHierVersLockedAt",
+              "newParameterName": "universalhierverslockedat"
+            },
+            {
+              "name": "HierarchyIsSetGroupCompatible",
+              "newParameterName": "hierarchyissetgroupcompatible"
+            },
+            {
+              "name": "SAP__Messages",
+              "newParameterName": "sap_messages"
+            },
+            {
+              "name": "_CostCtrHierarchyNode",
+              "newParameterName": "costctrhierarchynode"
+            },
+            {
+              "name": "_CostCtrHierarchyText",
+              "newParameterName": "costctrhierarchytext"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "validitystartdate"
+          },
+          {
+            "name": "UniversalHierNodeType",
+            "newParameterName": "universalhiernodetype"
+          },
+          {
+            "name": "CostCtrHierarchyNodeShortID",
+            "newParameterName": "costctrhierarchynodeshortid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get__costctrhierarchy_in_costcenterhierarchynodetext_for_sap_sel",
+    "title": "get__CostCtrHierarchy_in_CostCenterHierarchyNodeText_for_sap_self",
+    "description": "Navigate from CostCenterHierarchyNodeText to the related CostCenterHierarchy_Type entity via the '_CostCtrHierarchy' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNodeText",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchy",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "validitystartdate"
+          },
+          {
+            "name": "UniversalHierNodeType",
+            "newParameterName": "universalhiernodetype"
+          },
+          {
+            "name": "CostCtrHierarchyNodeShortID",
+            "newParameterName": "costctrhierarchynodeshortid"
+          },
+          {
+            "name": "Language",
+            "newParameterName": "language"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update__costctrhierarchy_in_costcenterhierarchynodetext_for_sap_",
+    "title": "update__CostCtrHierarchy_in_CostCenterHierarchyNodeText_for_sap_self",
+    "description": "Update the CostCenterHierarchy_Type entity navigated from CostCenterHierarchyNodeText via the '_CostCtrHierarchy' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sap_self tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNodeText",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchy",
+          "crudOperation": "update",
+          "parameters": [
+            {
+              "name": "ControllingArea",
+              "newParameterName": "controllingarea"
+            },
+            {
+              "name": "UniversalHierVersStatus",
+              "newParameterName": "universalhierversstatus"
+            },
+            {
+              "name": "UniversalHierVersUpdatedAt",
+              "newParameterName": "universalhierversupdatedat"
+            },
+            {
+              "name": "UniversalHierVersUpdatedBy",
+              "newParameterName": "universalhierversupdatedby"
+            },
+            {
+              "name": "UniversalHierVersCreatedAt",
+              "newParameterName": "universalhierverscreatedat"
+            },
+            {
+              "name": "UniversalHierVersCreatedBy",
+              "newParameterName": "universalhierverscreatedby"
+            },
+            {
+              "name": "UniversalHierVersLockedBy",
+              "newParameterName": "universalhierverslockedby"
+            },
+            {
+              "name": "UniversalHierVersLockedAt",
+              "newParameterName": "universalhierverslockedat"
+            },
+            {
+              "name": "HierarchyIsSetGroupCompatible",
+              "newParameterName": "hierarchyissetgroupcompatible"
+            },
+            {
+              "name": "SAP__Messages",
+              "newParameterName": "sap_messages"
+            },
+            {
+              "name": "_CostCtrHierarchyNode",
+              "newParameterName": "costctrhierarchynode"
+            },
+            {
+              "name": "_CostCtrHierarchyText",
+              "newParameterName": "costctrhierarchytext"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "validitystartdate"
+          },
+          {
+            "name": "UniversalHierNodeType",
+            "newParameterName": "universalhiernodetype"
+          },
+          {
+            "name": "CostCtrHierarchyNodeShortID",
+            "newParameterName": "costctrhierarchynodeshortid"
+          },
+          {
+            "name": "Language",
+            "newParameterName": "language"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get__costctrhierarchynode_in_costcenterhierarchynodetext_for_sap",
+    "title": "get__CostCtrHierarchyNode_in_CostCenterHierarchyNodeText_for_sap_self",
+    "description": "Navigate from CostCenterHierarchyNodeText to the related CostCenterHierarchyNode_Type entity via the '_CostCtrHierarchyNode' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNodeText",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchyNode",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "validitystartdate"
+          },
+          {
+            "name": "UniversalHierNodeType",
+            "newParameterName": "universalhiernodetype"
+          },
+          {
+            "name": "CostCtrHierarchyNodeShortID",
+            "newParameterName": "costctrhierarchynodeshortid"
+          },
+          {
+            "name": "Language",
+            "newParameterName": "language"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update__costctrhierarchynode_in_costcenterhierarchynodetext_for_",
+    "title": "update__CostCtrHierarchyNode_in_CostCenterHierarchyNodeText_for_sap_self",
+    "description": "Update the CostCenterHierarchyNode_Type entity navigated from CostCenterHierarchyNodeText via the '_CostCtrHierarchyNode' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sap_self tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNodeText",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchyNode",
+          "crudOperation": "update",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyNodeParent",
+              "newParameterName": "costcenterhierarchynodeparent"
+            },
+            {
+              "name": "UniversalHierNodeLevel",
+              "newParameterName": "universalhiernodelevel"
+            },
+            {
+              "name": "HierarchyNodeSequence",
+              "newParameterName": "hierarchynodesequence"
+            },
+            {
+              "name": "CostCenterRangeFrom",
+              "newParameterName": "costcenterrangefrom"
+            },
+            {
+              "name": "CostCenterRangeTo",
+              "newParameterName": "costcenterrangeto"
+            },
+            {
+              "name": "SAP__Messages",
+              "newParameterName": "sap_messages"
+            },
+            {
+              "name": "_CostCtrHierarchy",
+              "newParameterName": "costctrhierarchy"
+            },
+            {
+              "name": "_CostCtrHierNodeText",
+              "newParameterName": "costctrhiernodetext"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "validitystartdate"
+          },
+          {
+            "name": "UniversalHierNodeType",
+            "newParameterName": "universalhiernodetype"
+          },
+          {
+            "name": "CostCtrHierarchyNodeShortID",
+            "newParameterName": "costctrhierarchynodeshortid"
+          },
+          {
+            "name": "Language",
+            "newParameterName": "language"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get__costctrhierarchy_in_costcenterhierarchytext_for_sap_self",
+    "title": "get__CostCtrHierarchy_in_CostCenterHierarchyText_for_sap_self",
+    "description": "Navigate from CostCenterHierarchyText to the related CostCenterHierarchy_Type entity via the '_CostCtrHierarchy' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyText",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchy",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "validitystartdate"
+          },
+          {
+            "name": "Language",
+            "newParameterName": "language"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update__costctrhierarchy_in_costcenterhierarchytext_for_sap_self",
+    "title": "update__CostCtrHierarchy_in_CostCenterHierarchyText_for_sap_self",
+    "description": "Update the CostCenterHierarchy_Type entity navigated from CostCenterHierarchyText via the '_CostCtrHierarchy' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sap_self tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyText",
+        "navigationProperty": {
+          "name": "_CostCtrHierarchy",
+          "crudOperation": "update",
+          "parameters": [
+            {
+              "name": "ControllingArea",
+              "newParameterName": "controllingarea"
+            },
+            {
+              "name": "UniversalHierVersStatus",
+              "newParameterName": "universalhierversstatus"
+            },
+            {
+              "name": "UniversalHierVersUpdatedAt",
+              "newParameterName": "universalhierversupdatedat"
+            },
+            {
+              "name": "UniversalHierVersUpdatedBy",
+              "newParameterName": "universalhierversupdatedby"
+            },
+            {
+              "name": "UniversalHierVersCreatedAt",
+              "newParameterName": "universalhierverscreatedat"
+            },
+            {
+              "name": "UniversalHierVersCreatedBy",
+              "newParameterName": "universalhierverscreatedby"
+            },
+            {
+              "name": "UniversalHierVersLockedBy",
+              "newParameterName": "universalhierverslockedby"
+            },
+            {
+              "name": "UniversalHierVersLockedAt",
+              "newParameterName": "universalhierverslockedat"
+            },
+            {
+              "name": "HierarchyIsSetGroupCompatible",
+              "newParameterName": "hierarchyissetgroupcompatible"
+            },
+            {
+              "name": "SAP__Messages",
+              "newParameterName": "sap_messages"
+            },
+            {
+              "name": "_CostCtrHierarchyNode",
+              "newParameterName": "costctrhierarchynode"
+            },
+            {
+              "name": "_CostCtrHierarchyText",
+              "newParameterName": "costctrhierarchytext"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "CostCenterHierarchyShortID",
+            "newParameterName": "costcenterhierarchyshortid"
+          },
+          {
+            "name": "ValidityEndDate",
+            "newParameterName": "validityenddate"
+          },
+          {
+            "name": "ValidityStartDate",
+            "newParameterName": "validitystartdate"
+          },
+          {
+            "name": "Language",
+            "newParameterName": "language"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "action_sort_on_sap_self_costcenterhierarchynode_type",
+    "title": "action_Sort_on_sap_self_costcenterhierarchynode_type",
+    "description": "OData bound action: Sort on entity SAP__self.CostCenterHierarchyNode_Type in the sap_self service",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "operation": {
+          "name": "Sort",
+          "type": "action",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "validitystartdate"
+            },
+            {
+              "name": "CostCtrHierarchyNodeShortID",
+              "newParameterName": "costctrhierarchynodeshortid"
+            },
+            {
+              "name": "HierarchyNodeSorting",
+              "newParameterName": "hierarchynodesorting"
+            }
+          ]
+        },
+        "parameters": []
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "action_assigncostcenter_on_sap_self_costcenterhierarchynode_type",
+    "title": "action_AssignCostCenter_on_sap_self_costcenterhierarchynode_type",
+    "description": "OData bound action: AssignCostCenter on entity SAP__self.CostCenterHierarchyNode_Type in the sap_self service",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "operation": {
+          "name": "AssignCostCenter",
+          "type": "action",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "validitystartdate"
+            },
+            {
+              "name": "CostCtrHierarchyNodeShortID",
+              "newParameterName": "costctrhierarchynodeshortid"
+            },
+            {
+              "name": "_CostCtrHierNodeAssgmt",
+              "newParameterName": "costctrhiernodeassgmt"
+            }
+          ]
+        },
+        "parameters": []
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "action_activatehierarchy_on_sap_self_costcenterhierarchy_type",
+    "title": "action_ActivateHierarchy_on_sap_self_costcenterhierarchy_type",
+    "description": "OData bound action: ActivateHierarchy on entity SAP__self.CostCenterHierarchy_Type in the sap_self service",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "operation": {
+          "name": "ActivateHierarchy",
+          "type": "action",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "validitystartdate"
+            }
+          ]
+        },
+        "parameters": []
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "action_create_on_sap_self_costcenterhierarchy_type",
+    "title": "action_Create_on_sap_self_costcenterhierarchy_type",
+    "description": "OData bound action: Create on entity SAP__self.CostCenterHierarchy_Type in the sap_self service",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "operation": {
+          "name": "Create",
+          "type": "action",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "validitystartdate"
+            },
+            {
+              "name": "HierarchyIsSetGroupCompatible",
+              "newParameterName": "hierarchyissetgroupcompatible"
+            },
+            {
+              "name": "_CostCtrHierarchyNode",
+              "newParameterName": "costctrhierarchynode"
+            },
+            {
+              "name": "_CostCtrHierarchyText",
+              "newParameterName": "costctrhierarchytext"
+            }
+          ]
+        },
+        "parameters": []
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "action_delete_on_sap_self_costcenterhierarchynode_type",
+    "title": "action_Delete_on_sap_self_costcenterhierarchynode_type",
+    "description": "OData bound action: Delete on entity SAP__self.CostCenterHierarchyNode_Type in the sap_self service",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "operation": {
+          "name": "Delete",
+          "type": "action",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "validitystartdate"
+            },
+            {
+              "name": "CostCtrHierarchyNodeShortID",
+              "newParameterName": "costctrhierarchynodeshortid"
+            }
+          ]
+        },
+        "parameters": []
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "action_unassigncostcenter_on_sap_self_costcenterhierarchynode_ty",
+    "title": "action_UnassignCostCenter_on_sap_self_costcenterhierarchynode_type",
+    "description": "OData bound action: UnassignCostCenter on entity SAP__self.CostCenterHierarchyNode_Type in the sap_self service",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "operation": {
+          "name": "UnassignCostCenter",
+          "type": "action",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "validitystartdate"
+            },
+            {
+              "name": "_CostCtrHierNodeAssgmt",
+              "newParameterName": "costctrhiernodeassgmt"
+            }
+          ]
+        },
+        "parameters": []
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "action_deactivatehierarchy_on_sap_self_costcenterhierarchy_type",
+    "title": "action_DeactivateHierarchy_on_sap_self_costcenterhierarchy_type",
+    "description": "OData bound action: DeactivateHierarchy on entity SAP__self.CostCenterHierarchy_Type in the sap_self service",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "operation": {
+          "name": "DeactivateHierarchy",
+          "type": "action",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "validitystartdate"
+            }
+          ]
+        },
+        "parameters": []
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "action_move_on_sap_self_costcenterhierarchynode_type",
+    "title": "action_Move_on_sap_self_costcenterhierarchynode_type",
+    "description": "OData bound action: Move on entity SAP__self.CostCenterHierarchyNode_Type in the sap_self service",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "operation": {
+          "name": "Move",
+          "type": "action",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "validitystartdate"
+            },
+            {
+              "name": "CostCtrHierarchyNodeShortID",
+              "newParameterName": "costctrhierarchynodeshortid"
+            },
+            {
+              "name": "CostCenterHierarchyNodeParent",
+              "newParameterName": "costcenterhierarchynodeparent"
+            },
+            {
+              "name": "CostCtrHierarchyNodePrevNode",
+              "newParameterName": "costctrhierarchynodeprevnode"
+            }
+          ]
+        },
+        "parameters": []
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "action_create_on_sap_self_costcenterhierarchynode_type",
+    "title": "action_Create_on_sap_self_costcenterhierarchynode_type",
+    "description": "OData bound action: Create on entity SAP__self.CostCenterHierarchyNode_Type in the sap_self service",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "operation": {
+          "name": "Create",
+          "type": "action",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "validitystartdate"
+            },
+            {
+              "name": "CostCenterHierarchyNodeParent",
+              "newParameterName": "costcenterhierarchynodeparent"
+            },
+            {
+              "name": "_CostCtrHierarchyNode",
+              "newParameterName": "costctrhierarchynode"
+            }
+          ]
+        },
+        "parameters": []
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "action_update_on_sap_self_costcenterhierarchy_type",
+    "title": "action_Update_on_sap_self_costcenterhierarchy_type",
+    "description": "OData bound action: Update on entity SAP__self.CostCenterHierarchy_Type in the sap_self service",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "operation": {
+          "name": "Update",
+          "type": "action",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "validitystartdate"
+            },
+            {
+              "name": "HierarchyIsSetGroupCompatible",
+              "newParameterName": "hierarchyissetgroupcompatible"
+            },
+            {
+              "name": "TextIsDeltaUpdated",
+              "newParameterName": "textisdeltaupdated"
+            },
+            {
+              "name": "_CostCtrHierarchyText",
+              "newParameterName": "costctrhierarchytext"
+            }
+          ]
+        },
+        "parameters": []
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "action_delete_on_sap_self_costcenterhierarchy_type",
+    "title": "action_Delete_on_sap_self_costcenterhierarchy_type",
+    "description": "OData bound action: Delete on entity SAP__self.CostCenterHierarchy_Type in the sap_self service",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchy",
+        "operation": {
+          "name": "Delete",
+          "type": "action",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "validitystartdate"
+            }
+          ]
+        },
+        "parameters": []
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "action_update_on_sap_self_costcenterhierarchynode_type",
+    "title": "action_Update_on_sap_self_costcenterhierarchynode_type",
+    "description": "OData bound action: Update on entity SAP__self.CostCenterHierarchyNode_Type in the sap_self service",
+    "odataType": {
+      "entitySet": {
+        "name": "CostCenterHierarchyNode",
+        "operation": {
+          "name": "Update",
+          "type": "action",
+          "parameters": [
+            {
+              "name": "CostCenterHierarchyShortID",
+              "newParameterName": "costcenterhierarchyshortid"
+            },
+            {
+              "name": "ValidityEndDate",
+              "newParameterName": "validityenddate"
+            },
+            {
+              "name": "ValidityStartDate",
+              "newParameterName": "validitystartdate"
+            },
+            {
+              "name": "CostCtrHierarchyNodeShortID",
+              "newParameterName": "costctrhierarchynodeshortid"
+            },
+            {
+              "name": "CostCtrHierarchyNodeNewShortID",
+              "newParameterName": "costctrhierarchynodenewshortid"
+            },
+            {
+              "name": "TextIsDeltaUpdated",
+              "newParameterName": "textisdeltaupdated"
+            },
+            {
+              "name": "_CostCtrHierNodeText",
+              "newParameterName": "costctrhiernodetext"
+            }
+          ]
+        },
+        "parameters": []
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  }
+]

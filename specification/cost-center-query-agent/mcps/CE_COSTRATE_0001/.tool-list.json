@@ -1,0 +1,1768 @@
+[
+  {
+    "name": "get_metadata_sap_self",
+    "title": "get_metadata_sap_self",
+    "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+    "odataType": {
+      "metadataRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "batch_for_sap_self",
+    "title": "batch_for_sap_self",
+    "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+    "odataType": {
+      "batchRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_actualcostrate_for_sap_self",
+    "title": "list_ActualCostRate_for_sap_self",
+    "description": "Retrieve a list of entities from the ActualCostRate collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ActualCostRate",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_actualcostrate_for_sap_self",
+    "title": "create_ActualCostRate_for_sap_self",
+    "description": "Create a new instance of the ActualCostRate EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ActualCostRate",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "CompanyCode",
+            "newParameterName": "companycode"
+          },
+          {
+            "name": "CostCenter",
+            "newParameterName": "costcenter"
+          },
+          {
+            "name": "ActivityType",
+            "newParameterName": "activitytype"
+          },
+          {
+            "name": "Currency",
+            "newParameterName": "currency"
+          },
+          {
+            "name": "ControllingArea",
+            "newParameterName": "controllingarea"
+          },
+          {
+            "name": "ValidityStartFiscalYear",
+            "newParameterName": "validitystartfiscalyear"
+          },
+          {
+            "name": "ValidityStartFiscalPeriod",
+            "newParameterName": "validitystartfiscalperiod"
+          },
+          {
+            "name": "ValidityEndFiscalYear",
+            "newParameterName": "validityendfiscalyear"
+          },
+          {
+            "name": "ValidityEndFiscalPeriod",
+            "newParameterName": "validityendfiscalperiod"
+          },
+          {
+            "name": "CostRateFixedAmount",
+            "newParameterName": "costratefixedamount"
+          },
+          {
+            "name": "CostRateVarblAmount",
+            "newParameterName": "costratevarblamount"
+          },
+          {
+            "name": "CostRateScaleFactor",
+            "newParameterName": "costratescalefactor"
+          },
+          {
+            "name": "CostCtrActivityTypeQtyUnit",
+            "newParameterName": "costctractivitytypeqtyunit"
+          },
+          {
+            "name": "Ledger",
+            "newParameterName": "ledger"
+          },
+          {
+            "name": "CostRateIsOverwriteMode",
+            "newParameterName": "costrateisoverwritemode"
+          },
+          {
+            "name": "SAP__Messages",
+            "newParameterName": "sap_messages"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "odata-entityid"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_actualcostrate_for_sap_self",
+    "title": "update_ActualCostRate_for_sap_self",
+    "description": "Update an entity in ActualCostRate EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ActualCostRate",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "AccountingCostRateUUID",
+            "newParameterName": "accountingcostrateuuid"
+          },
+          {
+            "name": "CompanyCode",
+            "newParameterName": "companycode"
+          },
+          {
+            "name": "CostCenter",
+            "newParameterName": "costcenter"
+          },
+          {
+            "name": "ActivityType",
+            "newParameterName": "activitytype"
+          },
+          {
+            "name": "Currency",
+            "newParameterName": "currency"
+          },
+          {
+            "name": "ControllingArea",
+            "newParameterName": "controllingarea"
+          },
+          {
+            "name": "ValidityStartFiscalYear",
+            "newParameterName": "validitystartfiscalyear"
+          },
+          {
+            "name": "ValidityStartFiscalPeriod",
+            "newParameterName": "validitystartfiscalperiod"
+          },
+          {
+            "name": "ValidityEndFiscalYear",
+            "newParameterName": "validityendfiscalyear"
+          },
+          {
+            "name": "ValidityEndFiscalPeriod",
+            "newParameterName": "validityendfiscalperiod"
+          },
+          {
+            "name": "CostRateFixedAmount",
+            "newParameterName": "costratefixedamount"
+          },
+          {
+            "name": "CostRateVarblAmount",
+            "newParameterName": "costratevarblamount"
+          },
+          {
+            "name": "CostRateScaleFactor",
+            "newParameterName": "costratescalefactor"
+          },
+          {
+            "name": "CostCtrActivityTypeQtyUnit",
+            "newParameterName": "costctractivitytypeqtyunit"
+          },
+          {
+            "name": "Ledger",
+            "newParameterName": "ledger"
+          },
+          {
+            "name": "CostRateIsOverwriteMode",
+            "newParameterName": "costrateisoverwritemode"
+          },
+          {
+            "name": "SAP__Messages",
+            "newParameterName": "sap_messages"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_actualcostrate_for_sap_self",
+    "title": "delete_ActualCostRate_for_sap_self",
+    "description": "Delete an entity from ActualCostRate EntitySet in the sap_self service.",
+    "odataType": {
+      "entitySet": {
+        "name": "ActualCostRate",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "AccountingCostRateUUID",
+            "newParameterName": "accountingcostrateuuid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_actualcostrate_for_sap_self",
+    "title": "get_ActualCostRate_for_sap_self",
+    "description": "Retrieve a single entity by its key from the ActualCostRate collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ActualCostRate",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "AccountingCostRateUUID",
+            "newParameterName": "accountingcostrateuuid"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_actualcostrate_for_sap_self",
+    "title": "count_ActualCostRate_for_sap_self",
+    "description": "Get the total count of entities in the ActualCostRate collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ActualCostRate",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_plancostrate_for_sap_self",
+    "title": "list_PlanCostRate_for_sap_self",
+    "description": "Retrieve a list of entities from the PlanCostRate collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PlanCostRate",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_plancostrate_for_sap_self",
+    "title": "create_PlanCostRate_for_sap_self",
+    "description": "Create a new instance of the PlanCostRate EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PlanCostRate",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "CompanyCode",
+            "newParameterName": "companycode"
+          },
+          {
+            "name": "CostCenter",
+            "newParameterName": "costcenter"
+          },
+          {
+            "name": "ActivityType",
+            "newParameterName": "activitytype"
+          },
+          {
+            "name": "Currency",
+            "newParameterName": "currency"
+          },
+          {
+            "name": "ControllingArea",
+            "newParameterName": "controllingarea"
+          },
+          {
+            "name": "ValidityStartFiscalYear",
+            "newParameterName": "validitystartfiscalyear"
+          },
+          {
+            "name": "ValidityStartFiscalPeriod",
+            "newParameterName": "validitystartfiscalperiod"
+          },
+          {
+            "name": "ValidityEndFiscalYear",
+            "newParameterName": "validityendfiscalyear"
+          },
+          {
+            "name": "ValidityEndFiscalPeriod",
+            "newParameterName": "validityendfiscalperiod"
+          },
+          {
+            "name": "CostRateFixedAmount",
+            "newParameterName": "costratefixedamount"
+          },
+          {
+            "name": "CostRateVarblAmount",
+            "newParameterName": "costratevarblamount"
+          },
+          {
+            "name": "CostRateScaleFactor",
+            "newParameterName": "costratescalefactor"
+          },
+          {
+            "name": "CostCtrActivityTypeQtyUnit",
+            "newParameterName": "costctractivitytypeqtyunit"
+          },
+          {
+            "name": "Ledger",
+            "newParameterName": "ledger"
+          },
+          {
+            "name": "CostRateIsOverwriteMode",
+            "newParameterName": "costrateisoverwritemode"
+          },
+          {
+            "name": "SAP__Messages",
+            "newParameterName": "sap_messages"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "odata-entityid"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_plancostrate_for_sap_self",
+    "title": "update_PlanCostRate_for_sap_self",
+    "description": "Update an entity in PlanCostRate EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PlanCostRate",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "AccountingCostRateUUID",
+            "newParameterName": "accountingcostrateuuid"
+          },
+          {
+            "name": "CompanyCode",
+            "newParameterName": "companycode"
+          },
+          {
+            "name": "CostCenter",
+            "newParameterName": "costcenter"
+          },
+          {
+            "name": "ActivityType",
+            "newParameterName": "activitytype"
+          },
+          {
+            "name": "Currency",
+            "newParameterName": "currency"
+          },
+          {
+            "name": "ControllingArea",
+            "newParameterName": "controllingarea"
+          },
+          {
+            "name": "ValidityStartFiscalYear",
+            "newParameterName": "validitystartfiscalyear"
+          },
+          {
+            "name": "ValidityStartFiscalPeriod",
+            "newParameterName": "validitystartfiscalperiod"
+          },
+          {
+            "name": "ValidityEndFiscalYear",
+            "newParameterName": "validityendfiscalyear"
+          },
+          {
+            "name": "ValidityEndFiscalPeriod",
+            "newParameterName": "validityendfiscalperiod"
+          },
+          {
+            "name": "CostRateFixedAmount",
+            "newParameterName": "costratefixedamount"
+          },
+          {
+            "name": "CostRateVarblAmount",
+            "newParameterName": "costratevarblamount"
+          },
+          {
+            "name": "CostRateScaleFactor",
+            "newParameterName": "costratescalefactor"
+          },
+          {
+            "name": "CostCtrActivityTypeQtyUnit",
+            "newParameterName": "costctractivitytypeqtyunit"
+          },
+          {
+            "name": "Ledger",
+            "newParameterName": "ledger"
+          },
+          {
+            "name": "CostRateIsOverwriteMode",
+            "newParameterName": "costrateisoverwritemode"
+          },
+          {
+            "name": "SAP__Messages",
+            "newParameterName": "sap_messages"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_plancostrate_for_sap_self",
+    "title": "delete_PlanCostRate_for_sap_self",
+    "description": "Delete an entity from PlanCostRate EntitySet in the sap_self service.",
+    "odataType": {
+      "entitySet": {
+        "name": "PlanCostRate",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "AccountingCostRateUUID",
+            "newParameterName": "accountingcostrateuuid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_plancostrate_for_sap_self",
+    "title": "get_PlanCostRate_for_sap_self",
+    "description": "Retrieve a single entity by its key from the PlanCostRate collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PlanCostRate",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "AccountingCostRateUUID",
+            "newParameterName": "accountingcostrateuuid"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_plancostrate_for_sap_self",
+    "title": "count_PlanCostRate_for_sap_self",
+    "description": "Get the total count of entities in the PlanCostRate collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PlanCostRate",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_servicecostrate_for_sap_self",
+    "title": "list_ServiceCostRate_for_sap_self",
+    "description": "Retrieve a list of entities from the ServiceCostRate collection in the sap_self service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ServiceCostRate",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "count"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_servicecostrate_for_sap_self",
+    "title": "create_ServiceCostRate_for_sap_self",
+    "description": "Create a new instance of the ServiceCostRate EntitySet in the sap_self service. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ServiceCostRate",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "CompanyCode",
+            "newParameterName": "companycode"
+          },
+          {
+            "name": "CostCenter",
+            "newParameterName": "costcenter"
+          },
+          {
+            "name": "ActivityType",
+            "newParameterName": "activitytype"
+          },
+          {
+            "name": "Currency",
+            "newParameterName": "currency"
+          },
+          {
+            "name": "ControllingArea",
+            "newParameterName": "controllingarea"
+          },
+          {
+            "name": "ReceivingCompanyCode",
+            "newParameterName": "receivingcompanycode"
+          },
+          {
+            "name": "IsIntercompanyRate",
+            "newParameterName": "isintercompanyrate"
+          },
+          {
+            "name": "ValidityStartFiscalYear",
+            "newParameterName": "validitystartfiscalyear"
+          },
+          {
+            "name": "ValidityStartFiscalPeriod",
+            "newParameterName": "validitystartfiscalperiod"
+          },
+          {
+            "name": "ValidityEndFiscalYear",
+            "newParameterName": "validityendfiscalyear"
+          },
+          {
+            "name": "ValidityEndFiscalPeriod",
+            "newParameterName": "validityendfiscalperiod"
+          },
+          {
+            "name": "TimeSheetOvertimeCategory",
+            "newParameterName": "timesheetovertimecategory"
+          },
+          {
+            "name": "ServiceCostLevel",
+            "newParameterName": "servicecostlevel"
+          },
+          {
+            "name": "PersonnelNumber",
+            "newParameterName": "personnelnumber"
+          },
+          {
+            "name": "WorkItem",
+            "newParameterName": "workitem"
+          },
+          {
+            "name": "WBSElementExternalID",
+            "newParameterName": "wbselementexternalid"
+          },
+          {
+            "name": "CostRateVarblAmount",
+            "newParameterName": "costratevarblamount"
+          },
+          {
+            "name": "CostRateScaleFactor",
+            "newParameterName": "costratescalefactor"
+          },
+          {
+            "name": "CostCtrActivityTypeQtyUnit",
+            "newParameterName": "costctractivitytypeqtyunit"
+          },
+          {
+            "name": "Ledger",
+            "newParameterName": "ledger"
+          },
+          {
+            "name": "CostRateIsOverwriteMode",
+            "newParameterName": "costrateisoverwritemode"
+          },
+          {
+            "name": "SAP__Messages",
+            "newParameterName": "sap_messages"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "odata-entityid"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_servicecostrate_for_sap_self",
+    "title": "update_ServiceCostRate_for_sap_self",
+    "description": "Update an entity in ServiceCostRate EntitySet in the sap_self service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ServiceCostRate",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "AccountingCostRateUUID",
+            "newParameterName": "accountingcostrateuuid"
+          },
+          {
+            "name": "CompanyCode",
+            "newParameterName": "companycode"
+          },
+          {
+            "name": "CostCenter",
+            "newParameterName": "costcenter"
+          },
+          {
+            "name": "ActivityType",
+            "newParameterName": "activitytype"
+          },
+          {
+            "name": "Currency",
+            "newParameterName": "currency"
+          },
+          {
+            "name": "ControllingArea",
+            "newParameterName": "controllingarea"
+          },
+          {
+            "name": "ReceivingCompanyCode",
+            "newParameterName": "receivingcompanycode"
+          },
+          {
+            "name": "IsIntercompanyRate",
+            "newParameterName": "isintercompanyrate"
+          },
+          {
+            "name": "ValidityStartFiscalYear",
+            "newParameterName": "validitystartfiscalyear"
+          },
+          {
+            "name": "ValidityStartFiscalPeriod",
+            "newParameterName": "validitystartfiscalperiod"
+          },
+          {
+            "name": "ValidityEndFiscalYear",
+            "newParameterName": "validityendfiscalyear"
+          },
+          {
+            "name": "ValidityEndFiscalPeriod",
+            "newParameterName": "validityendfiscalperiod"
+          },
+          {
+            "name": "TimeSheetOvertimeCategory",
+            "newParameterName": "timesheetovertimecategory"
+          },
+          {
+            "name": "ServiceCostLevel",
+            "newParameterName": "servicecostlevel"
+          },
+          {
+            "name": "PersonnelNumber",
+            "newParameterName": "personnelnumber"
+          },
+          {
+            "name": "WorkItem",
+            "newParameterName": "workitem"
+          },
+          {
+            "name": "WBSElementExternalID",
+            "newParameterName": "wbselementexternalid"
+          },
+          {
+            "name": "CostRateVarblAmount",
+            "newParameterName": "costratevarblamount"
+          },
+          {
+            "name": "CostRateScaleFactor",
+            "newParameterName": "costratescalefactor"
+          },
+          {
+            "name": "CostCtrActivityTypeQtyUnit",
+            "newParameterName": "costctractivitytypeqtyunit"
+          },
+          {
+            "name": "Ledger",
+            "newParameterName": "ledger"
+          },
+          {
+            "name": "CostRateIsOverwriteMode",
+            "newParameterName": "costrateisoverwritemode"
+          },
+          {
+            "name": "SAP__Messages",
+            "newParameterName": "sap_messages"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_servicecostrate_for_sap_self",
+    "title": "delete_ServiceCostRate_for_sap_self",
+    "description": "Delete an entity from ServiceCostRate EntitySet in the sap_self service.",
+    "odataType": {
+      "entitySet": {
+        "name": "ServiceCostRate",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "AccountingCostRateUUID",
+            "newParameterName": "accountingcostrateuuid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_servicecostrate_for_sap_self",
+    "title": "get_ServiceCostRate_for_sap_self",
+    "description": "Retrieve a single entity by its key from the ServiceCostRate collection in the sap_self service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ServiceCostRate",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "AccountingCostRateUUID",
+            "newParameterName": "accountingcostrateuuid"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "preference-applied"
+        },
+        {
+          "name": "vary"
+        },
+        {
+          "name": "retry-after"
+        },
+        {
+          "name": "asyncresult"
+        },
+        {
+          "name": "odata-error"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_servicecostrate_for_sap_self",
+    "title": "count_ServiceCostRate_for_sap_self",
+    "description": "Get the total count of entities in the ServiceCostRate collection in the sap_self service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sap_self tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "ServiceCostRate",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "odata-version"
+        },
+        {
+          "name": "sap-messages"
+        }
+      ]
+    }
+  }
+]

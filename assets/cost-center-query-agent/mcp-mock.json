@@ -1,0 +1,622 @@
+{
+  "servers": {
+    "sap-s4-ce-costcenter-0001": {
+      "mcp_server_name": "sap.mcp/sap_self",
+      "description": "MCP server for SAP S/4HANA Cost Center master data (CE_COSTCENTER_0001)",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get metadata of the OData service to discover available entities and their properties.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "EntitySet": { "type": "string", "description": "Filter metadata by entity set name" }
+            },
+            "required": []
+          },
+          "mock_response": "<?xml version=\"1.0\" encoding=\"utf-8\"?><edmx:Edmx Version=\"1.0\"><edmx:DataServices><Schema Namespace=\"sap_self\"><EntityType Name=\"A_CostCenter_2Type\"><Key><PropertyRef Name=\"ControllingArea\"/><PropertyRef Name=\"CostCenter\"/><PropertyRef Name=\"ValidityEndDate\"/></Key><Property Name=\"ControllingArea\" Type=\"Edm.String\" MaxLength=\"4\"/><Property Name=\"CostCenter\" Type=\"Edm.String\" MaxLength=\"10\"/><Property Name=\"ValidityEndDate\" Type=\"Edm.DateTime\"/><Property Name=\"ValidityStartDate\" Type=\"Edm.DateTime\"/><Property Name=\"CompanyCode\" Type=\"Edm.String\" MaxLength=\"4\"/><Property Name=\"CostCenterResponsibleUser\" Type=\"Edm.String\" MaxLength=\"12\"/><Property Name=\"CostCenterName\" Type=\"Edm.String\" MaxLength=\"20\"/><Property Name=\"CostCenterCategory\" Type=\"Edm.String\" MaxLength=\"1\"/><Property Name=\"ProfitCenter\" Type=\"Edm.String\" MaxLength=\"10\"/><Property Name=\"BusinessArea\" Type=\"Edm.String\" MaxLength=\"4\"/></EntityType></Schema></edmx:DataServices></edmx:Edmx>"
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a single batch request.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "requests": { "type": "array", "description": "Array of batch requests" }
+            },
+            "required": ["requests"]
+          },
+          "mock_response": { "responses": [] }
+        },
+        "list_a_costcenter_2_for_sap_self": {
+          "description": "Retrieve a list of entities from the A_CostCenter_2 collection.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$top": { "type": "string", "description": "Maximum number of records" },
+              "$skip": { "type": "string", "description": "Number of records to skip" },
+              "$filter": { "type": "string", "description": "OData filter expression" },
+              "$select": { "type": "string", "description": "Comma-separated list of fields to return" },
+              "$expand": { "type": "string", "description": "Navigation properties to expand" },
+              "$orderby": { "type": "string", "description": "Sort order" }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": [
+                {
+                  "ControllingArea": "A000",
+                  "CostCenter": "CC-1000",
+                  "ValidityEndDate": "/Date(9999999999000)/",
+                  "ValidityStartDate": "/Date(978307200000)/",
+                  "CompanyCode": "1000",
+                  "CostCenterResponsibleUser": "J.DOE",
+                  "CostCenterName": "Corporate IT",
+                  "CostCenterCategory": "E",
+                  "ProfitCenter": "PC-100",
+                  "BusinessArea": "BA10"
+                },
+                {
+                  "ControllingArea": "A000",
+                  "CostCenter": "CC-2000",
+                  "ValidityEndDate": "/Date(9999999999000)/",
+                  "ValidityStartDate": "/Date(978307200000)/",
+                  "CompanyCode": "1000",
+                  "CostCenterResponsibleUser": "M.SMITH",
+                  "CostCenterName": "Finance & Controlling",
+                  "CostCenterCategory": "E",
+                  "ProfitCenter": "PC-200",
+                  "BusinessArea": "BA20"
+                },
+                {
+                  "ControllingArea": "A000",
+                  "CostCenter": "CC-3000",
+                  "ValidityEndDate": "/Date(9999999999000)/",
+                  "ValidityStartDate": "/Date(978307200000)/",
+                  "CompanyCode": "1000",
+                  "CostCenterResponsibleUser": "S.JOHNSON",
+                  "CostCenterName": "Human Resources",
+                  "CostCenterCategory": "E",
+                  "ProfitCenter": "PC-300",
+                  "BusinessArea": "BA30"
+                },
+                {
+                  "ControllingArea": "A000",
+                  "CostCenter": "CC-4000",
+                  "ValidityEndDate": "/Date(9999999999000)/",
+                  "ValidityStartDate": "/Date(978307200000)/",
+                  "CompanyCode": "1000",
+                  "CostCenterResponsibleUser": "R.PATEL",
+                  "CostCenterName": "Sales & Distribution",
+                  "CostCenterCategory": "E",
+                  "ProfitCenter": "PC-400",
+                  "BusinessArea": "BA40"
+                },
+                {
+                  "ControllingArea": "A000",
+                  "CostCenter": "CC-5000",
+                  "ValidityEndDate": "/Date(9999999999000)/",
+                  "ValidityStartDate": "/Date(978307200000)/",
+                  "CompanyCode": "1000",
+                  "CostCenterResponsibleUser": "L.WANG",
+                  "CostCenterName": "Research & Development",
+                  "CostCenterCategory": "E",
+                  "ProfitCenter": "PC-500",
+                  "BusinessArea": "BA50"
+                },
+                {
+                  "ControllingArea": "A000",
+                  "CostCenter": "CC-6000",
+                  "ValidityEndDate": "/Date(9999999999000)/",
+                  "ValidityStartDate": "/Date(978307200000)/",
+                  "CompanyCode": "2000",
+                  "CostCenterResponsibleUser": "A.MUELLER",
+                  "CostCenterName": "Manufacturing Plant A",
+                  "CostCenterCategory": "P",
+                  "ProfitCenter": "PC-600",
+                  "BusinessArea": "BA60"
+                },
+                {
+                  "ControllingArea": "A000",
+                  "CostCenter": "CC-6100",
+                  "ValidityEndDate": "/Date(9999999999000)/",
+                  "ValidityStartDate": "/Date(978307200000)/",
+                  "CompanyCode": "2000",
+                  "CostCenterResponsibleUser": "T.FISCHER",
+                  "CostCenterName": "Manufacturing Plant B",
+                  "CostCenterCategory": "P",
+                  "ProfitCenter": "PC-600",
+                  "BusinessArea": "BA60"
+                },
+                {
+                  "ControllingArea": "A000",
+                  "CostCenter": "CC-7000",
+                  "ValidityEndDate": "/Date(9999999999000)/",
+                  "ValidityStartDate": "/Date(978307200000)/",
+                  "CompanyCode": "1000",
+                  "CostCenterResponsibleUser": "C.BROWN",
+                  "CostCenterName": "Legal & Compliance",
+                  "CostCenterCategory": "E",
+                  "ProfitCenter": "PC-700",
+                  "BusinessArea": "BA10"
+                },
+                {
+                  "ControllingArea": "A000",
+                  "CostCenter": "CC-8000",
+                  "ValidityEndDate": "/Date(9999999999000)/",
+                  "ValidityStartDate": "/Date(978307200000)/",
+                  "CompanyCode": "1000",
+                  "CostCenterResponsibleUser": "F.GARCIA",
+                  "CostCenterName": "Marketing",
+                  "CostCenterCategory": "E",
+                  "ProfitCenter": "PC-400",
+                  "BusinessArea": "BA40"
+                },
+                {
+                  "ControllingArea": "A000",
+                  "CostCenter": "CC-9000",
+                  "ValidityEndDate": "/Date(9999999999000)/",
+                  "ValidityStartDate": "/Date(978307200000)/",
+                  "CompanyCode": "1000",
+                  "CostCenterResponsibleUser": "K.TANAKA",
+                  "CostCenterName": "Executive Management",
+                  "CostCenterCategory": "E",
+                  "ProfitCenter": "PC-100",
+                  "BusinessArea": "BA10"
+                }
+              ]
+            }
+          }
+        },
+        "get_a_costcenter_2_for_sap_self": {
+          "description": "Retrieve a single cost center entity by its key.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ControllingArea": { "type": "string" },
+              "CostCenter": { "type": "string" },
+              "ValidityEndDate": { "type": "string" },
+              "$select": { "type": "string" },
+              "$expand": { "type": "string" }
+            },
+            "required": ["ControllingArea", "CostCenter", "ValidityEndDate"]
+          },
+          "mock_response": {
+            "d": {
+              "ControllingArea": "A000",
+              "CostCenter": "CC-1000",
+              "ValidityEndDate": "/Date(9999999999000)/",
+              "ValidityStartDate": "/Date(978307200000)/",
+              "CompanyCode": "1000",
+              "CostCenterResponsibleUser": "J.DOE",
+              "CostCenterName": "Corporate IT",
+              "CostCenterCategory": "E",
+              "ProfitCenter": "PC-100",
+              "BusinessArea": "BA10"
+            }
+          }
+        },
+        "count_a_costcenter_2_for_sap_self": {
+          "description": "Get the total count of cost center entities.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$filter": { "type": "string" }
+            },
+            "required": []
+          },
+          "mock_response": 10
+        },
+        "list_a_costcentertext_2_for_sap_self": {
+          "description": "Retrieve a list of cost center text entities.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "$top": { "type": "string" },
+              "$filter": { "type": "string" },
+              "$select": { "type": "string" }
+            },
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": [
+                { "ControllingArea": "A000", "CostCenter": "CC-1000", "Language": "EN", "CostCenterName": "Corporate IT", "CostCenterDescription": "Corporate Information Technology — infrastructure, applications and support" },
+                { "ControllingArea": "A000", "CostCenter": "CC-2000", "Language": "EN", "CostCenterName": "Finance & Controlling", "CostCenterDescription": "Financial accounting, management reporting and controlling activities" },
+                { "ControllingArea": "A000", "CostCenter": "CC-3000", "Language": "EN", "CostCenterName": "Human Resources", "CostCenterDescription": "Talent acquisition, payroll and employee development" },
+                { "ControllingArea": "A000", "CostCenter": "CC-4000", "Language": "EN", "CostCenterName": "Sales & Distribution", "CostCenterDescription": "Regional and global sales operations and order fulfilment" },
+                { "ControllingArea": "A000", "CostCenter": "CC-5000", "Language": "EN", "CostCenterName": "Research & Development", "CostCenterDescription": "Product innovation, engineering and prototype development" },
+                { "ControllingArea": "A000", "CostCenter": "CC-6000", "Language": "EN", "CostCenterName": "Manufacturing Plant A", "CostCenterDescription": "Primary production facility — discrete manufacturing" },
+                { "ControllingArea": "A000", "CostCenter": "CC-6100", "Language": "EN", "CostCenterName": "Manufacturing Plant B", "CostCenterDescription": "Secondary production facility — process manufacturing" },
+                { "ControllingArea": "A000", "CostCenter": "CC-7000", "Language": "EN", "CostCenterName": "Legal & Compliance", "CostCenterDescription": "Corporate legal counsel, IP management and regulatory compliance" },
+                { "ControllingArea": "A000", "CostCenter": "CC-8000", "Language": "EN", "CostCenterName": "Marketing", "CostCenterDescription": "Brand management, campaigns and market research" },
+                { "ControllingArea": "A000", "CostCenter": "CC-9000", "Language": "EN", "CostCenterName": "Executive Management", "CostCenterDescription": "C-suite and board-level administrative costs" }
+              ]
+            }
+          }
+        },
+        "get_a_costcentertext_2_for_sap_self": {
+          "description": "Retrieve a single cost center text entity by key.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ControllingArea": { "type": "string" },
+              "CostCenter": { "type": "string" },
+              "Language": { "type": "string" }
+            },
+            "required": ["ControllingArea", "CostCenter", "Language"]
+          },
+          "mock_response": {
+            "d": { "ControllingArea": "A000", "CostCenter": "CC-1000", "Language": "EN", "CostCenterName": "Corporate IT", "CostCenterDescription": "Corporate Information Technology — infrastructure, applications and support" }
+          }
+        },
+        "count_a_costcentertext_2_for_sap_self": {
+          "description": "Count cost center text entities.",
+          "input_schema": { "type": "object", "properties": { "$filter": { "type": "string" } }, "required": [] },
+          "mock_response": 10
+        },
+        "list_a_costcenter_2__costcentertext_for_sap_self": {
+          "description": "Retrieve cost center texts via navigation from a cost center.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ControllingArea": { "type": "string" },
+              "CostCenter": { "type": "string" },
+              "ValidityEndDate": { "type": "string" }
+            },
+            "required": ["ControllingArea", "CostCenter", "ValidityEndDate"]
+          },
+          "mock_response": {
+            "d": {
+              "results": [
+                { "Language": "EN", "CostCenterName": "Corporate IT", "CostCenterDescription": "Corporate Information Technology — infrastructure, applications and support" }
+              ]
+            }
+          }
+        },
+        "get_a_costcenter_2__costcentertext_for_sap_self": {
+          "description": "Retrieve a single cost center text via navigation.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ControllingArea": { "type": "string" },
+              "CostCenter": { "type": "string" },
+              "ValidityEndDate": { "type": "string" },
+              "Language": { "type": "string" }
+            },
+            "required": ["ControllingArea", "CostCenter", "ValidityEndDate", "Language"]
+          },
+          "mock_response": {
+            "d": { "Language": "EN", "CostCenterName": "Corporate IT", "CostCenterDescription": "Corporate Information Technology — infrastructure, applications and support" }
+          }
+        },
+        "count_a_costcenter_2__costcentertext_for_sap_self": {
+          "description": "Count cost center texts via navigation.",
+          "input_schema": { "type": "object", "properties": {}, "required": [] },
+          "mock_response": 1
+        },
+        "get__costcenter_in_a_costcentertext_2_for_sap_self": {
+          "description": "Navigate from CostCenterText to the related CostCenter entity.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "ControllingArea": { "type": "string" },
+              "CostCenter": { "type": "string" },
+              "Language": { "type": "string" }
+            },
+            "required": ["ControllingArea", "CostCenter", "Language"]
+          },
+          "mock_response": {
+            "d": { "ControllingArea": "A000", "CostCenter": "CC-1000", "CostCenterName": "Corporate IT", "CompanyCode": "1000" }
+          }
+        }
+      }
+    },
+    "sap-s4-ce-costcenterhierarchy-0001": {
+      "mcp_server_name": "sap.mcp/sap_self",
+      "description": "MCP server for SAP S/4HANA Cost Center Hierarchy (CE_COSTCENTERHIERARCHY_0001)",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get OData service metadata.",
+          "input_schema": { "type": "object", "properties": { "EntitySet": { "type": "string" } }, "required": [] },
+          "mock_response": "<?xml version=\"1.0\"?><edmx:Edmx Version=\"1.0\"><edmx:DataServices><Schema Namespace=\"sap_self\"></Schema></edmx:DataServices></edmx:Edmx>"
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a batch.",
+          "input_schema": { "type": "object", "properties": { "requests": { "type": "array" } }, "required": ["requests"] },
+          "mock_response": { "responses": [] }
+        },
+        "list_costcenterhierarchy_for_sap_self": {
+          "description": "Retrieve a list of cost center hierarchies.",
+          "input_schema": { "type": "object", "properties": { "$top": { "type": "string" }, "$filter": { "type": "string" }, "$select": { "type": "string" } }, "required": [] },
+          "mock_response": {
+            "d": {
+              "results": [
+                { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "CostCenterHierarchyName": "Corporate Standard Hierarchy" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "MFG-HIER", "CostCenterHierarchyName": "Manufacturing Hierarchy" }
+              ]
+            }
+          }
+        },
+        "get_costcenterhierarchy_for_sap_self": {
+          "description": "Retrieve a single cost center hierarchy by key.",
+          "input_schema": { "type": "object", "properties": { "ControllingArea": { "type": "string" }, "CostCenterHierarchy": { "type": "string" } }, "required": ["ControllingArea", "CostCenterHierarchy"] },
+          "mock_response": {
+            "d": { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "CostCenterHierarchyName": "Corporate Standard Hierarchy" }
+          }
+        },
+        "count_costcenterhierarchy_for_sap_self": {
+          "description": "Count cost center hierarchies.",
+          "input_schema": { "type": "object", "properties": { "$filter": { "type": "string" } }, "required": [] },
+          "mock_response": 2
+        },
+        "list_costcenterhierarchynode_for_sap_self": {
+          "description": "Retrieve a list of cost center hierarchy nodes.",
+          "input_schema": { "type": "object", "properties": { "$top": { "type": "string" }, "$filter": { "type": "string" }, "$select": { "type": "string" } }, "required": [] },
+          "mock_response": {
+            "d": {
+              "results": [
+                { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "HierarchyNode": "NODE-ROOT", "ParentNode": "", "CostCenter": "", "HierarchyLevel": "1", "NodeDescription": "Company Root" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "HierarchyNode": "NODE-ADM", "ParentNode": "NODE-ROOT", "CostCenter": "", "HierarchyLevel": "2", "NodeDescription": "Administration" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "HierarchyNode": "NODE-OPS", "ParentNode": "NODE-ROOT", "CostCenter": "", "HierarchyLevel": "2", "NodeDescription": "Operations" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "HierarchyNode": "NODE-CC1000", "ParentNode": "NODE-ADM", "CostCenter": "CC-1000", "HierarchyLevel": "3", "NodeDescription": "Corporate IT" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "HierarchyNode": "NODE-CC2000", "ParentNode": "NODE-ADM", "CostCenter": "CC-2000", "HierarchyLevel": "3", "NodeDescription": "Finance & Controlling" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "HierarchyNode": "NODE-CC3000", "ParentNode": "NODE-ADM", "CostCenter": "CC-3000", "HierarchyLevel": "3", "NodeDescription": "Human Resources" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "HierarchyNode": "NODE-CC7000", "ParentNode": "NODE-ADM", "CostCenter": "CC-7000", "HierarchyLevel": "3", "NodeDescription": "Legal & Compliance" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "HierarchyNode": "NODE-CC9000", "ParentNode": "NODE-ADM", "CostCenter": "CC-9000", "HierarchyLevel": "3", "NodeDescription": "Executive Management" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "HierarchyNode": "NODE-CC4000", "ParentNode": "NODE-OPS", "CostCenter": "CC-4000", "HierarchyLevel": "3", "NodeDescription": "Sales & Distribution" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "HierarchyNode": "NODE-CC5000", "ParentNode": "NODE-OPS", "CostCenter": "CC-5000", "HierarchyLevel": "3", "NodeDescription": "Research & Development" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "HierarchyNode": "NODE-CC8000", "ParentNode": "NODE-OPS", "CostCenter": "CC-8000", "HierarchyLevel": "3", "NodeDescription": "Marketing" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "MFG-HIER", "HierarchyNode": "NODE-MFG", "ParentNode": "", "CostCenter": "", "HierarchyLevel": "1", "NodeDescription": "Manufacturing Root" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "MFG-HIER", "HierarchyNode": "NODE-CC6000", "ParentNode": "NODE-MFG", "CostCenter": "CC-6000", "HierarchyLevel": "2", "NodeDescription": "Manufacturing Plant A" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "MFG-HIER", "HierarchyNode": "NODE-CC6100", "ParentNode": "NODE-MFG", "CostCenter": "CC-6100", "HierarchyLevel": "2", "NodeDescription": "Manufacturing Plant B" }
+              ]
+            }
+          }
+        },
+        "get_costcenterhierarchynode_for_sap_self": {
+          "description": "Retrieve a single hierarchy node by key.",
+          "input_schema": { "type": "object", "properties": { "ControllingArea": { "type": "string" }, "CostCenterHierarchy": { "type": "string" }, "HierarchyNode": { "type": "string" } }, "required": ["ControllingArea", "CostCenterHierarchy", "HierarchyNode"] },
+          "mock_response": {
+            "d": { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "HierarchyNode": "NODE-ROOT", "ParentNode": "", "CostCenter": "", "HierarchyLevel": "1", "NodeDescription": "Company Root" }
+          }
+        },
+        "count_costcenterhierarchynode_for_sap_self": {
+          "description": "Count hierarchy nodes.",
+          "input_schema": { "type": "object", "properties": { "$filter": { "type": "string" } }, "required": [] },
+          "mock_response": 14
+        },
+        "list_costcenterhierarchynodetext_for_sap_self": {
+          "description": "Retrieve text descriptions for hierarchy nodes.",
+          "input_schema": { "type": "object", "properties": { "$top": { "type": "string" }, "$filter": { "type": "string" } }, "required": [] },
+          "mock_response": {
+            "d": {
+              "results": [
+                { "ControllingArea": "A000", "HierarchyNode": "NODE-ROOT",   "Language": "EN", "NodeDescription": "Company Root" },
+                { "ControllingArea": "A000", "HierarchyNode": "NODE-ADM",    "Language": "EN", "NodeDescription": "Administration" },
+                { "ControllingArea": "A000", "HierarchyNode": "NODE-OPS",    "Language": "EN", "NodeDescription": "Operations" },
+                { "ControllingArea": "A000", "HierarchyNode": "NODE-MFG",    "Language": "EN", "NodeDescription": "Manufacturing Root" },
+                { "ControllingArea": "A000", "HierarchyNode": "NODE-CC1000", "Language": "EN", "NodeDescription": "Corporate IT" },
+                { "ControllingArea": "A000", "HierarchyNode": "NODE-CC2000", "Language": "EN", "NodeDescription": "Finance & Controlling" },
+                { "ControllingArea": "A000", "HierarchyNode": "NODE-CC3000", "Language": "EN", "NodeDescription": "Human Resources" },
+                { "ControllingArea": "A000", "HierarchyNode": "NODE-CC4000", "Language": "EN", "NodeDescription": "Sales & Distribution" },
+                { "ControllingArea": "A000", "HierarchyNode": "NODE-CC5000", "Language": "EN", "NodeDescription": "Research & Development" },
+                { "ControllingArea": "A000", "HierarchyNode": "NODE-CC6000", "Language": "EN", "NodeDescription": "Manufacturing Plant A" },
+                { "ControllingArea": "A000", "HierarchyNode": "NODE-CC6100", "Language": "EN", "NodeDescription": "Manufacturing Plant B" },
+                { "ControllingArea": "A000", "HierarchyNode": "NODE-CC7000", "Language": "EN", "NodeDescription": "Legal & Compliance" },
+                { "ControllingArea": "A000", "HierarchyNode": "NODE-CC8000", "Language": "EN", "NodeDescription": "Marketing" },
+                { "ControllingArea": "A000", "HierarchyNode": "NODE-CC9000", "Language": "EN", "NodeDescription": "Executive Management" }
+              ]
+            }
+          }
+        },
+        "get_costcenterhierarchynodetext_for_sap_self": {
+          "description": "Retrieve a single hierarchy node text.",
+          "input_schema": { "type": "object", "properties": { "ControllingArea": { "type": "string" }, "HierarchyNode": { "type": "string" }, "Language": { "type": "string" } }, "required": ["ControllingArea", "HierarchyNode", "Language"] },
+          "mock_response": {
+            "d": { "ControllingArea": "A000", "HierarchyNode": "NODE-ROOT", "Language": "EN", "NodeDescription": "Company Root" }
+          }
+        },
+        "count_costcenterhierarchynodetext_for_sap_self": {
+          "description": "Count hierarchy node texts.",
+          "input_schema": { "type": "object", "properties": { "$filter": { "type": "string" } }, "required": [] },
+          "mock_response": 14
+        },
+        "list_costcenterhierarchytext_for_sap_self": {
+          "description": "Retrieve text descriptions for hierarchies.",
+          "input_schema": { "type": "object", "properties": { "$top": { "type": "string" }, "$filter": { "type": "string" } }, "required": [] },
+          "mock_response": {
+            "d": {
+              "results": [
+                { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "Language": "EN", "HierarchyDescription": "Corporate Standard Hierarchy — all admin and ops cost centers" },
+                { "ControllingArea": "A000", "CostCenterHierarchy": "MFG-HIER",  "Language": "EN", "HierarchyDescription": "Manufacturing Hierarchy — plant-level cost centers" }
+              ]
+            }
+          }
+        },
+        "get_costcenterhierarchytext_for_sap_self": {
+          "description": "Retrieve a single hierarchy text.",
+          "input_schema": { "type": "object", "properties": { "ControllingArea": { "type": "string" }, "CostCenterHierarchy": { "type": "string" }, "Language": { "type": "string" } }, "required": ["ControllingArea", "CostCenterHierarchy", "Language"] },
+          "mock_response": {
+            "d": { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "Language": "EN", "HierarchyDescription": "Corporate Standard Hierarchy — all admin and ops cost centers" }
+          }
+        },
+        "count_costcenterhierarchytext_for_sap_self": {
+          "description": "Count hierarchy texts.",
+          "input_schema": { "type": "object", "properties": { "$filter": { "type": "string" } }, "required": [] },
+          "mock_response": 2
+        },
+        "list_costcenterhierarchy__costctrhierarchynode_for_sap_self": {
+          "description": "List hierarchy nodes via navigation from a hierarchy.",
+          "input_schema": { "type": "object", "properties": { "ControllingArea": { "type": "string" }, "CostCenterHierarchy": { "type": "string" }, "$top": { "type": "string" }, "$filter": { "type": "string" } }, "required": ["ControllingArea", "CostCenterHierarchy"] },
+          "mock_response": {
+            "d": {
+              "results": [
+                { "HierarchyNode": "NODE-ROOT",   "ParentNode": "",          "CostCenter": "",       "HierarchyLevel": "1" },
+                { "HierarchyNode": "NODE-ADM",    "ParentNode": "NODE-ROOT", "CostCenter": "",       "HierarchyLevel": "2" },
+                { "HierarchyNode": "NODE-OPS",    "ParentNode": "NODE-ROOT", "CostCenter": "",       "HierarchyLevel": "2" },
+                { "HierarchyNode": "NODE-CC1000", "ParentNode": "NODE-ADM",  "CostCenter": "CC-1000","HierarchyLevel": "3" },
+                { "HierarchyNode": "NODE-CC2000", "ParentNode": "NODE-ADM",  "CostCenter": "CC-2000","HierarchyLevel": "3" },
+                { "HierarchyNode": "NODE-CC3000", "ParentNode": "NODE-ADM",  "CostCenter": "CC-3000","HierarchyLevel": "3" },
+                { "HierarchyNode": "NODE-CC4000", "ParentNode": "NODE-OPS",  "CostCenter": "CC-4000","HierarchyLevel": "3" },
+                { "HierarchyNode": "NODE-CC5000", "ParentNode": "NODE-OPS",  "CostCenter": "CC-5000","HierarchyLevel": "3" },
+                { "HierarchyNode": "NODE-CC8000", "ParentNode": "NODE-OPS",  "CostCenter": "CC-8000","HierarchyLevel": "3" }
+              ]
+            }
+          }
+        },
+        "get_costcenterhierarchy__costctrhierarchynode_for_sap_self": {
+          "description": "Get a single hierarchy node via navigation.",
+          "input_schema": { "type": "object", "properties": { "ControllingArea": { "type": "string" }, "CostCenterHierarchy": { "type": "string" }, "HierarchyNode": { "type": "string" } }, "required": ["ControllingArea", "CostCenterHierarchy", "HierarchyNode"] },
+          "mock_response": {
+            "d": { "HierarchyNode": "NODE-ROOT", "ParentNode": "", "CostCenter": "", "HierarchyLevel": "1" }
+          }
+        },
+        "count_costcenterhierarchy__costctrhierarchynode_for_sap_self": {
+          "description": "Count hierarchy nodes via navigation.",
+          "input_schema": { "type": "object", "properties": { "ControllingArea": { "type": "string" }, "CostCenterHierarchy": { "type": "string" } }, "required": ["ControllingArea", "CostCenterHierarchy"] },
+          "mock_response": 9
+        },
+        "get__costctrhierarchy_in_costcenterhierarchynode_for_sap_self": {
+          "description": "Navigate from a hierarchy node back to the parent hierarchy.",
+          "input_schema": { "type": "object", "properties": { "ControllingArea": { "type": "string" }, "CostCenterHierarchy": { "type": "string" }, "HierarchyNode": { "type": "string" } }, "required": ["ControllingArea", "CostCenterHierarchy", "HierarchyNode"] },
+          "mock_response": {
+            "d": { "ControllingArea": "A000", "CostCenterHierarchy": "CORP-HIER", "CostCenterHierarchyName": "Corporate Standard Hierarchy" }
+          }
+        }
+      }
+    },
+    "sap-s4-ce-costrate-0001": {
+      "mcp_server_name": "sap.mcp/sap_self",
+      "description": "MCP server for SAP S/4HANA Cost Rates (CE_COSTRATE_0001)",
+      "tools": {
+        "get_metadata_sap_self": {
+          "description": "Get OData service metadata.",
+          "input_schema": { "type": "object", "properties": { "EntitySet": { "type": "string" } }, "required": [] },
+          "mock_response": "<?xml version=\"1.0\"?><edmx:Edmx Version=\"1.0\"><edmx:DataServices><Schema Namespace=\"sap_self\"></Schema></edmx:DataServices></edmx:Edmx>"
+        },
+        "batch_for_sap_self": {
+          "description": "Execute multiple OData operations in a batch.",
+          "input_schema": { "type": "object", "properties": { "requests": { "type": "array" } }, "required": ["requests"] },
+          "mock_response": { "responses": [] }
+        },
+        "list_actualcostrate_for_sap_self": {
+          "description": "Retrieve a list of actual cost rate entities.",
+          "input_schema": { "type": "object", "properties": { "$top": { "type": "string" }, "$filter": { "type": "string" }, "$select": { "type": "string" } }, "required": [] },
+          "mock_response": {
+            "d": {
+              "results": [
+                { "ControllingArea": "A000", "CostCenter": "CC-1000", "ActivityType": "LAB",  "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "128.50", "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-1000", "ActivityType": "MACH", "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "75.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-2000", "ActivityType": "LAB",  "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "95.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-2000", "ActivityType": "SERV", "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "88.75",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-3000", "ActivityType": "LAB",  "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "82.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-4000", "ActivityType": "LAB",  "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "91.25",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-4000", "ActivityType": "SERV", "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "110.00", "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-5000", "ActivityType": "LAB",  "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "145.00", "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-5000", "ActivityType": "MACH", "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "60.50",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-6000", "ActivityType": "MACH", "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "55.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-6000", "ActivityType": "LAB",  "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "70.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-6100", "ActivityType": "MACH", "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "58.25",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-6100", "ActivityType": "LAB",  "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "68.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-7000", "ActivityType": "LAB",  "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "175.00", "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-8000", "ActivityType": "LAB",  "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "99.50",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-9000", "ActivityType": "LAB",  "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "210.00", "Currency": "USD", "Unit": "H" }
+              ]
+            }
+          }
+        },
+        "get_actualcostrate_for_sap_self": {
+          "description": "Retrieve a single actual cost rate by key.",
+          "input_schema": { "type": "object", "properties": { "ControllingArea": { "type": "string" }, "CostCenter": { "type": "string" }, "ActivityType": { "type": "string" }, "FiscalYear": { "type": "string" } }, "required": ["ControllingArea", "CostCenter", "ActivityType", "FiscalYear"] },
+          "mock_response": {
+            "d": { "ControllingArea": "A000", "CostCenter": "CC-1000", "ActivityType": "LAB", "FiscalYear": "2026", "FiscalPeriod": "001", "CostRate": "128.50", "Currency": "USD", "Unit": "H" }
+          }
+        },
+        "count_actualcostrate_for_sap_self": {
+          "description": "Count actual cost rate entities.",
+          "input_schema": { "type": "object", "properties": { "$filter": { "type": "string" } }, "required": [] },
+          "mock_response": 16
+        },
+        "list_plancostrate_for_sap_self": {
+          "description": "Retrieve a list of plan cost rate entities.",
+          "input_schema": { "type": "object", "properties": { "$top": { "type": "string" }, "$filter": { "type": "string" }, "$select": { "type": "string" } }, "required": [] },
+          "mock_response": {
+            "d": {
+              "results": [
+                { "ControllingArea": "A000", "CostCenter": "CC-1000", "ActivityType": "LAB",  "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "125.00", "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-1000", "ActivityType": "MACH", "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "72.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-2000", "ActivityType": "LAB",  "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "90.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-2000", "ActivityType": "SERV", "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "85.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-3000", "ActivityType": "LAB",  "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "80.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-4000", "ActivityType": "LAB",  "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "88.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-4000", "ActivityType": "SERV", "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "105.00", "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-5000", "ActivityType": "LAB",  "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "140.00", "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-5000", "ActivityType": "MACH", "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "58.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-6000", "ActivityType": "MACH", "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "52.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-6000", "ActivityType": "LAB",  "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "67.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-6100", "ActivityType": "MACH", "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "55.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-6100", "ActivityType": "LAB",  "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "65.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-7000", "ActivityType": "LAB",  "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "170.00", "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-8000", "ActivityType": "LAB",  "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "96.00",  "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-9000", "ActivityType": "LAB",  "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "200.00", "Currency": "USD", "Unit": "H" }
+              ]
+            }
+          }
+        },
+        "get_plancostrate_for_sap_self": {
+          "description": "Retrieve a single plan cost rate by key.",
+          "input_schema": { "type": "object", "properties": { "ControllingArea": { "type": "string" }, "CostCenter": { "type": "string" }, "ActivityType": { "type": "string" }, "FiscalYear": { "type": "string" } }, "required": ["ControllingArea", "CostCenter", "ActivityType", "FiscalYear"] },
+          "mock_response": {
+            "d": { "ControllingArea": "A000", "CostCenter": "CC-1000", "ActivityType": "LAB", "FiscalYear": "2026", "PlanVersion": "0", "PlanCostRate": "125.00", "Currency": "USD", "Unit": "H" }
+          }
+        },
+        "count_plancostrate_for_sap_self": {
+          "description": "Count plan cost rate entities.",
+          "input_schema": { "type": "object", "properties": { "$filter": { "type": "string" } }, "required": [] },
+          "mock_response": 16
+        },
+        "list_servicecostrate_for_sap_self": {
+          "description": "Retrieve a list of service cost rate entities.",
+          "input_schema": { "type": "object", "properties": { "$top": { "type": "string" }, "$filter": { "type": "string" }, "$select": { "type": "string" } }, "required": [] },
+          "mock_response": {
+            "d": {
+              "results": [
+                { "ControllingArea": "A000", "CostCenter": "CC-1000", "ServiceType": "CONS", "FiscalYear": "2026", "ServiceCostRate": "220.00", "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-2000", "ServiceType": "CONS", "FiscalYear": "2026", "ServiceCostRate": "195.00", "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-5000", "ServiceType": "RES",  "FiscalYear": "2026", "ServiceCostRate": "260.00", "Currency": "USD", "Unit": "H" },
+                { "ControllingArea": "A000", "CostCenter": "CC-7000", "ServiceType": "CONS", "FiscalYear": "2026", "ServiceCostRate": "350.00", "Currency": "USD", "Unit": "H" }
+              ]
+            }
+          }
+        },
+        "get_servicecostrate_for_sap_self": {
+          "description": "Retrieve a single service cost rate by key.",
+          "input_schema": { "type": "object", "properties": { "ControllingArea": { "type": "string" }, "CostCenter": { "type": "string" }, "ServiceType": { "type": "string" }, "FiscalYear": { "type": "string" } }, "required": ["ControllingArea", "CostCenter", "ServiceType", "FiscalYear"] },
+          "mock_response": {
+            "d": { "ControllingArea": "A000", "CostCenter": "CC-1000", "ServiceType": "CONS", "FiscalYear": "2026", "ServiceCostRate": "220.00", "Currency": "USD", "Unit": "H" }
+          }
+        },
+        "count_servicecostrate_for_sap_self": {
+          "description": "Count service cost rate entities.",
+          "input_schema": { "type": "object", "properties": { "$filter": { "type": "string" } }, "required": [] },
+          "mock_response": 4
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.1.0",
+    "created_for_agent": "cost-center-query-agent",
+    "mock_mode": true,
+    "deterministic": true,
+    "total_servers": 3,
+    "total_tools": 41,
+    "generated_from": [
+      "assets/sap-s4-ce-costcenter-0001-mcp-server/mcp-translation/translation.json",
+      "assets/sap-s4-ce-costcenterhierarchy-0001-mcp-server/mcp-translation/translation.json",
+      "assets/sap-s4-ce-costrate-0001-mcp-server/mcp-translation/translation.json"
+    ],
+    "generation_date": "2026-10-14",
+    "note": "Enriched with realistic demo data for UI testing"
+  }
+}
