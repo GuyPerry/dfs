@@ -20,7 +20,7 @@ Finance teams spend significant time answering routine questions about cost cent
 3. **Cost center hierarchy navigation** — agent can traverse the cost center hierarchy and answer org-level questions.
 4. **Natural language interface live** — agent deployed and accessible via A2A protocol for end-user testing.
 5. **Demo validated** — agent correctly answers at least 5 representative finance queries end-to-end.
-
+fdfd
 ## Business Architecture (RBA)
 
 ### End-to-End Process
